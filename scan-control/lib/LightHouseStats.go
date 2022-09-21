@@ -6,9 +6,10 @@ import (
 )
 
 type LightHouseStats struct {
-	TotalResults int64
-	AvgRunTime   time.Duration
-	JsLibs       map[string]int64
+	TotalResults        int64
+	AvgRunTime          time.Duration
+	AvgPerformanceScore float64
+	JsLibs              map[string]int64
 
 	mutex sync.Mutex
 }
@@ -39,4 +40,6 @@ func (stats *LightHouseStats) AddResult(result LightHouseResult) {
 		}
 		stats.JsLibs[mapIdx] = stats.JsLibs[mapIdx] + 1
 	}
+
+	stats.AvgPerformanceScore = ((stats.AvgPerformanceScore * float64(stats.TotalResults-int64(1))) + result.Resp.Categories.Performance.Score) / float64(stats.TotalResults)
 }
