@@ -1,0 +1,16 @@
+{
+  "nodePath": "/snap/node/current/bin/node",
+  "outputPath": "scan-control/outputs",
+  "clientPath": "lighthouse-client/main.js",
+  "chromeBin": "",
+  "agentCount": 4,
+  "urlChannelBufferSize": 10,
+  "urls": [
+    "https://github.com",
+    "https://facebook.com",
+    "https://instagram.com",
+    "https://youtube.com",
+    "https://flutter.dev/",
+    "https://de.wikipedia.org"
+  ]
+}

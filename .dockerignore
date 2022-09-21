@@ -1,0 +1,5 @@
+readme.md
+.gitignore
+lighthouse-client/node_modules
+scan-control/outputs
+.idea

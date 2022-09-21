@@ -1,0 +1,16 @@
+{
+  "nodePath": "node",
+  "outputPath": "/app/outputs",
+  "clientPath": "/app/main.js",
+  "chromeBin": "/usr/bin/google-chrome",
+  "agentCount": 4,
+  "urlChannelBufferSize": 10,
+  "urls": [
+    "https://github.com",
+    "https://facebook.com",
+    "https://instagram.com",
+    "https://youtube.com",
+    "https://flutter.dev/",
+    "https://de.wikipedia.org"
+  ]
+}
