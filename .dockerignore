@@ -1,5 +1,8 @@
 readme.md
 .gitignore
 lighthouse-client/node_modules
-scan-control/outputs
-.idea
+lighthouse-client/.gitignore
+outputs/
+.idea/
+config/
+scan-control/.gitignore

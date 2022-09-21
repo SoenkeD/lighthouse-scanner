@@ -7,8 +7,8 @@ Tool build into Chrome. It also contains (a work in progress) analysis tooling.
 2. set rights for the output folder `chmod -R 0777 outputs`
 3. set configs `config/config.docker.json` from `config/config.docker.sample.json`
 4. build docker container `docker build -o lighthouse-scanner .`
-5. run load `docker run --security-opt seccomp:unconfined -v $PWD/outputs:/app/outputs:rw lighthouse-scanner cli load start`
-6. run analysis `docker run --security-opt seccomp:unconfined -v $PWD/outputs:/app/outputs:rw lighthouse-scanner cli analyze start`
+5. run load `docker run --security-opt seccomp:unconfined -v $PWD/outputs:/app/outputs:rw -v $PWD/config/config.docker.json:/config/config.json:ro lighthouse-scanner cli load start`
+6. run analysis `docker run --security-opt seccomp:unconfined -v $PWD/outputs:/app/outputs:rw -v $PWD/config/config.docker.json:/config/config.json:ro lighthouse-scanner cli analyze start`
 
 
 ### install

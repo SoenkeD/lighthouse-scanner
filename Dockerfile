@@ -31,7 +31,6 @@ RUN chown lighthouse /app /home/lighthouse
 USER lighthouse
 
 COPY --from=go-builder build/bin/ .
-COPY config/config.docker.json /config/config.json
 COPY lighthouse-client/main.js .
 
 ENTRYPOINT ["/app/lighthouse-scanner"]
